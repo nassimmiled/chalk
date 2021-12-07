@@ -22,7 +22,7 @@ function rainbow(string, offset) {
 		}
 	}
 
-	return characters.join("");
+	return characters.join('');
 }
 
 async function animateString(string) {
