@@ -1,6 +1,5 @@
 import convertColor from 'color-convert';
 import updateLog from 'log-update';
-import delay from 'yoctodelay';
 import chalk from '../source/index.js';
 
 const ignoreChars = /[^!-~]/g;
@@ -23,13 +22,13 @@ function rainbow(string, offset) {
 		}
 	}
 
-	return characters.join('');
+	return characters.join("");
 }
 
 async function animateString(string) {
 	for (let index = 0; index < 360 * 5; index++) {
 		updateLog(rainbow(string, index));
-		await delay(2); // eslint-disable-line no-await-in-loop
+		setTimeout(() => { }, 2, index);
 	}
 }
 
